@@ -12,10 +12,10 @@ body {
 }
 
 .header1 {
-background-color: #d1cec5;
-display: flex;
-justify-content: space-between;
-min-height: 10vh;
+    background-color: #d1cec5;
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
 }
 
 .logo {
@@ -37,14 +37,26 @@ min-height: 10vh;
     gap: 16px;
     padding: 20px;
     }
+
+.header-button {
+    border-radius: 12px;
+    border: none;
+    background-color: #dba72c;
+    padding: 20px;
+}
     
 .left, .right {
-    background-color: #755330;
-    width: 200px;
+    background-color: #d1cec5;
+    flex: 1;
     }
+
+.right img {
+    border-radius: 12px;
+}
 
 .content1 {
     background-color: #997c67;
+    text-align: center;
 }
 
 .content2 {
