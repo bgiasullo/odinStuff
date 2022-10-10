@@ -43,6 +43,11 @@ body {
     border: none;
     background-color: #dba72c;
     padding: 20px;
+    display: block; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
 }
     
 .left, .right {
