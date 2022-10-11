@@ -33,9 +33,10 @@ body {
 .header2 {
     background-color: #d1cec5;
     display: flex;
-    justify-content: space-evenly;
-    gap: 16px;
+    justify-content: center;
     padding: 20px;
+    align-items: center;
+    gap: 50px;
     }
 
 .header-button {
@@ -43,20 +44,34 @@ body {
     border: none;
     background-color: #dba72c;
     padding: 20px;
+    display: block; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
 }
     
-.left, .right {
+.left {
     background-color: #d1cec5;
-    flex: 1;
+    max-width: 80vh;
     }
 
-.right img {
+.me {
     border-radius: 12px;
+    max-width: 55vh;
 }
 
 .content1 {
     background-color: #997c67;
     text-align: center;
+    padding: 20px;
+}
+
+.hsp {
+    display: inline-block;
+    max-width: 50vh;
+    border-radius: 12px;
+    box-shadow: 2px;
 }
 
 .content2 {
