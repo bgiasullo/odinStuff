@@ -16,6 +16,9 @@ body {
     display: flex;
     justify-content: space-between;
     min-height: 10vh;
+    padding: 25px 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
 }
 
 .logo {
@@ -34,13 +37,13 @@ body {
     background-color: #d1cec5;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 50px 20px;
     align-items: center;
     gap: 50px;
     }
 
 .header-button {
-    border-radius: 12px;
+    border-radius: 8px;
     border: none;
     background-color: #dba72c;
     padding: 20px;
@@ -56,26 +59,43 @@ body {
     max-width: 80vh;
     }
 
-.me {
-    border-radius: 12px;
-    max-width: 55vh;
+.topimg, .hsp {
+    border-radius: 2px;
+    box-shadow: 2px 2px 6px #2e1e08;
+    max-width: 80vh;
 }
 
 .content1 {
     background-color: #997c67;
     text-align: center;
     padding: 20px;
-}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
 .hsp {
     display: inline-block;
-    max-width: 50vh;
-    border-radius: 12px;
-    box-shadow: 2px;
+    max-width: 300px;
+}
+
+figcaption {
+    padding: 12px;
 }
 
 .content2 {
     background-color: #e3cca1;
+    background-image: linear-gradient(#e3cca1, #dba72e);
+}
+
+.blockquote {
+    position: relative;
+    padding: 30px 0;
+    z-index: 1;
+    margin: 80px auto;
+    width: 100%;
+    max-width: 500px;
+    align-self: center;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
 }
 
 .content3 {
