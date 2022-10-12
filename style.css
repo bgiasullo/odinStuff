@@ -37,12 +37,12 @@ body {
     background-color: #d1cec5;
     display: flex;
     justify-content: center;
-    padding: 50px 20px;
+    padding: 50px 20px 60px;
     align-items: center;
     gap: 50px;
     }
 
-.header-button {
+.im-in {
     border-radius: 8px;
     border: none;
     background-color: #dba72c;
@@ -68,13 +68,15 @@ body {
 .content1 {
     background-color: #997c67;
     text-align: center;
-    padding: 20px;
+    padding: 50px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
 .hsp {
     display: inline-block;
     max-width: 300px;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 figcaption {
@@ -98,11 +100,51 @@ figcaption {
     border-bottom: solid 1px;
 }
 
+.blockquote:after {
+    position: absolute;
+    content: "”";
+    color: white;
+    font-size: 10rem;
+    line-height: 0;
+    bottom: -43px;
+    right: 30px;
+}
+
 .content3 {
-    background-color: #b0703c;
+    background-color: #d1cec5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 55px 25px;
+}
+
+.content3-wrap {
+    background-color: #997c67;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 45px;
+    padding: 20px;
+    width: 80%;
+}
+
+.sign-up {
+    border-radius: 8px;
+    border: solid 3px white;
+    background-color: #997c67;
+    padding: 20px;
+    display: block; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .footer {
-    background-color: #dba72c;
-    min-height: 15vh;
+    background-color: #2e1e08;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #997c67;
 }
