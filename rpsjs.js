@@ -1,6 +1,12 @@
   
 /* Get random choice from computer: rock, paper, or scissors */
-let getComputerChoice 
+const choices = [
+    "Roock", "Pooper", "Scoosers"
+];
+
+let getComputerChoice = choices [Math.floor(Math.random()*choices.length)];
+
+console.log (getComputerChoice);
 
 /* Provide three buttons for the user to select rock, paper, or scissors. */
 
