@@ -1,13 +1,20 @@
   
 /* Get random choice from computer: rock, paper, or scissors */
 
+
+const choices = ['Roock', 'Pooper', 'Scoosers'];
+console.log(computerChoice(choices));
+
 function computerChoice(choices)
 {
     return choices[Math.floor(Math.random()*choices.length)];
 }  
 
-const choices = ['Roock', 'Pooper', 'Scoosers'];
-
+function seeComputer()
+{
+    document.getElementById("computerChose").innerHTML = "Computer chose " + computerChoice(choices);
+    document.getElementById("nowYou").innerHTML = "Now you choose...";
+} 
 
 
 /* If user chooses paper and computer chooses rock, return message: Computer chose CHOICE. You win! Else return message: You lose! */

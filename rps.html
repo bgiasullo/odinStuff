@@ -38,11 +38,18 @@
 <body>
   <h1>Welcome to Roock Pooper Scoosers</h1>
     <script type="text/javascript" src="rpsjs.js"></script>
-    <p id="computerChose"></p>
-    <button onclick="roock()">Roock</button>
-    <button onclick="pooper()">Pooper</button>
-    <button onclick="scoosers()">Scoosers</button>
-    <p id="youChose"></p>
-    <p id="results"></p>
+
+    <div id="computerTurn">
+      <button onclick="seeComputer()">See what computer choose</button>
+      <p id="computerChose"></p>
+      <p id="nowYou"></p>
+    </div>
+    <div id="playerTurn">
+      <button onclick="roock()">Roock</button>
+      <button onclick="pooper()">Pooper</button>
+      <button onclick="scoosers()">Scoosers</button>
+      <p id="youChose"></p>
+      <p id="results"></p>
+  </div>
 </body>
 </html>
