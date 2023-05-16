@@ -12,7 +12,7 @@ function computerChoice(choices)
 
 function seeComputer()
 {
-    document.getElementById("computerChose").innerHTML = "Computer chose " + computerChoice(choices);
+    document.getElementById("computerChose").innerHTML = "Computer has chosen.";
     document.getElementById("nowYou").innerHTML = "Now you choose...";
 } 
 
