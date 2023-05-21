@@ -1,36 +1,57 @@
-  
-/* Get random choice from computer: rock, paper, or scissors */
 
+const choices = ['roock', 'pooper', 'scoosers'];
 
-const choices = ['Roock', 'Pooper', 'Scoosers'];
-
-
-
-let computerChoice = function getComputerCh(choices) {
-    return choices[Math.floor(Math.random()*choices.length)];
-}  
-
-console.log(computerChoice);
-
-function getPlayerCh() {
-    let playerChoice 
-    document.getElementById("youChose").innerHTML = "You chose " + playerChoice; 
-    document.getElementById("computerChose").innerHTML = "Computer chose " + computerChoice;
+  function getComputerChoice(choices) {
+ return choices[Math.floor(Math.random()*choices.length)];
 }
 
-if (computerChoice === playerChoice) {
-    document.getElementById('results').innerHTML = "It's a tie. Foo!";
-} else if (computerChoice === 'Pooper' && ) {
-    document.getElementById('results').innerHTML = "Pooper boots roock. You lose.";
-} else {
-    document.getElementById('results').innerHTML = "Roock boops Scoosers. You win!";
-}  
+console.log(getComputerChoice(choices));
 
+let computerChoice = getComputerChoice(choices);
 
+function roock() {
+    document.getElementById("start").innerHTML = "You chose roock. Computer chose " + computerChoice + ".";
+  if (computerChoice == 'roock') {
+    results = "It's a tie, ya dangus.";
+    }
+  else if (computerChoice == 'pooper')
+    {
+    results = "Pooper boops roock. You lose.";
+    }
+    else if (computerChoice == 'scoosers') {
+        results = 'Roock boots scoosers. You win! &#127881;'
+    }
+  document.getElementById("results").innerHTML = results;
+  }
 
+  function pooper() {
+    document.getElementById("start").innerHTML = "You chose pooper. Computer chose " + computerChoice + ".";
+  if (computerChoice == 'pooper') {
+    results = "It's a tie, ya dangus.";
+    }
+  else if (computerChoice == 'roock')
+    {
+    results = "Pooper boops roock. You win! &#127881;";
+    }
+    else if (computerChoice == 'scoosers') {
+        results = 'Scoosers boots pooper. You lose.'
+    }
+  document.getElementById("results").innerHTML = results;
+  }
 
-/* If user chooses paper and computer chooses rock, return message: Computer chose CHOICE. You win! Else return message: You lose! */
+  function scoosers() {
+    document.getElementById("start").innerHTML = "You chose scoosers. Computer chose " + computerChoice + ".";
+  if (computerChoice == 'scoosers') {
+    results = "It's a tie, ya dangus.";
+    }
+  else if (computerChoice == 'roock')
+    {
+    results = "Roock boops scoosers. You lose.";
+    }
+    else if (computerChoice == 'pooper') {
+        results = 'Scoosers boots pooper. You win! &#127881;'
+    }
+  document.getElementById("results").innerHTML = results;
+  }
 
-/* If user chooses rock and computer chooses scissors, return message: Computer chose CHOICE. You win! Else return message: You lose! */
-
-/* If user chooses scissors and computer chooses paper, return message: Computer chose CHOICE. You win! Else return message: You lose! */
+  

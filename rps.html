@@ -6,15 +6,19 @@
     <title>Roock Pooper Scoosers</title>
     <style>
       body {
-        background-color: rgb(30, 84, 146);
+        background-color: rgb(66, 65, 68);
         color: white;
         text-align: center;
         font-size: 26px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
 
+      #playerTurn {
+        margin: 100px 2px;
+      }
+
       button {
-        background-color: #fff351;
+        background-color: #0ddefa;
         border: none;
         color: rgb(7, 7, 8);
         padding: 15px 32px;
@@ -22,7 +26,7 @@
         text-decoration: none;
         display: inline-block;
         font-size: 19px;
-        margin: 4px 2px;
+        margin: 4px 4px;
         cursor: pointer;
         font-weight: bold;
         border-radius: 12px;
@@ -30,23 +34,46 @@
       }
 
       button:hover {
-        background-color: white;
-        color: rgb(7, 7, 8);
+        background-color: rgb(255, 216, 41);
+        color: black;
       }
+
+      #refresh {
+        margin: 120px 2px;
+      }
+
+      #start {
+        margin: 40px 2px;
+        color:rgb(141, 248, 99);
+        font-size: 38px;
+      }
+
+      #results {
+        color:rgb(250, 147, 236);
+        font-size: 38px;
+      }
+
     </style>
   </head>
 <body>
   <h1>Welcome to Roock Pooper Scoosers</h1>
   <h2>Ready??</h2>
+ 
     <script type="text/javascript" src="rpsjs.js"></script>
 
   <div id="playerTurn">
-      <button onclick="getPlayerCh()">Roock</button>
-      <button onclick="getPlayerCh()">Pooper</button>
-      <button onclick="getPlayerCh()">Scoosers</button>
-            <p id="youChose"></p>
-            <p id="computerChose"></p>
-      <p id="results"></p>
+    <p>Choose:</p>
+      <button onclick='roock()'>Roock</button>
+      <button onclick='pooper()'>Pooper</button>
+      <button onclick='scoosers()'>Scoosers</button>
+
+  </div>
+
+  <p id="start"></p>      
+  <p id="results"></p>
+  
+  <div id="refresh">
+    <button onclick="location.reload();">Start Agoon</button>
   </div>
 </body>
 </html>
