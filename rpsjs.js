@@ -1,57 +1,38 @@
-
-const choices = ['roock', 'pooper', 'scoosers'];
-
-  function getComputerChoice(choices) {
- return choices[Math.floor(Math.random()*choices.length)];
+// Function to generate computer's choice
+function getComputerChoice() {
+  const choices = ['rock', 'paper', 'scissors'];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
 }
 
-console.log(getComputerChoice(choices));
+// Function to determine the winner
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return "It's a tie!";
+  } else if (
+    (userChoice === 'rock' && computerChoice === 'scissors') ||
+    (userChoice === 'paper' && computerChoice === 'rock') ||
+    (userChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    return 'You win!';
+  } else {
+    return 'Computer wins!';
+  }
+}
 
-let computerChoice = getComputerChoice(choices);
-
-function roock() {
-    document.getElementById("start").innerHTML = "You chose roock. Computer chose " + computerChoice + ".";
-  if (computerChoice == 'roock') {
-    results = "It's a tie, ya dangus.";
-    }
-  else if (computerChoice == 'pooper')
-    {
-    results = "Pooper boops roock. You lose.";
-    }
-    else if (computerChoice == 'scoosers') {
-        results = 'Roock boots scoosers. You win! &#127881;'
-    }
-  document.getElementById("results").innerHTML = results;
+// Function to start the game
+function playGame() {
+  const userChoice = prompt("Choose: rock, paper, or scissors").toLowerCase();
+  if (userChoice !== 'rock' && userChoice !== 'paper' && userChoice !== 'scissors') {
+    console.log('Invalid choice. Please choose again!');
+    return;
   }
 
-  function pooper() {
-    document.getElementById("start").innerHTML = "You chose pooper. Computer chose " + computerChoice + ".";
-  if (computerChoice == 'pooper') {
-    results = "It's a tie, ya dangus.";
-    }
-  else if (computerChoice == 'roock')
-    {
-    results = "Pooper boops roock. You win! &#127881;";
-    }
-    else if (computerChoice == 'scoosers') {
-        results = 'Scoosers boots pooper. You lose.'
-    }
-  document.getElementById("results").innerHTML = results;
-  }
+  const computerChoice = getComputerChoice();
+  console.log(`You chose: ${userChoice}`);
+  console.log(`Computer chose: ${computerChoice}`);
+  console.log(determineWinner(userChoice, computerChoice));
+}
 
-  function scoosers() {
-    document.getElementById("start").innerHTML = "You chose scoosers. Computer chose " + computerChoice + ".";
-  if (computerChoice == 'scoosers') {
-    results = "It's a tie, ya dangus.";
-    }
-  else if (computerChoice == 'roock')
-    {
-    results = "Roock boops scoosers. You lose.";
-    }
-    else if (computerChoice == 'pooper') {
-        results = 'Scoosers boots pooper. You win! &#127881;'
-    }
-  document.getElementById("results").innerHTML = results;
-  }
-
-  
+// Start the game
+playGame();
