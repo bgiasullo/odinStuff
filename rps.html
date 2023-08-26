@@ -1,72 +1,48 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Roock Pooper Scoosers</title>
-    <style>
-      body {
-        background-color: rgb(66, 65, 68);
-        color: white;
-        text-align: center;
-        font-size: 26px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      #playerTurn {
-        margin: 100px 2px;
-      }
-
-      button {
-        background-color: #0ddefa;
-        border: none;
-        color: rgb(7, 7, 8);
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 19px;
-        margin: 4px 4px;
-        cursor: pointer;
-        font-weight: bold;
-        border-radius: 12px;
-        transition-duration: 0.4s;
-      }
-
-      button:hover {
-        background-color: rgb(255, 216, 41);
-        color: black;
-      }
-
-      #refresh {
-        margin: 120px 2px;
-      }
-
-      #start {
-        margin: 40px 2px;
-        color:rgb(141, 248, 99);
-        font-size: 38px;
-      }
-
-      #results {
-        color:rgb(250, 147, 236);
-        font-size: 38px;
-      }
-
-    </style>
-  </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rock Paper Scissors Game</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
 <body>
-  <h1>Welcome to Roock Pooper Scoosers</h1>
-  <h2>Ready??</h2>
- 
-    <script type="text/javascript" src="rpsjs.js"></script>
+<h1>Rock Paper Scissors Game</h1>
+<button id="rock">Rock</button>
+<button id="paper">Paper</button>
+<button id="scissors">Scissors</button>
+<p id="result"></p>
 
-  <div id="playerTurn">
-    <h1>Rock Paper Scissors Game</h1>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <p id="result"></p>
-  </div>
+<script>
+  // JavaScript code for the game (same as the previous example)
+
+  // Function to update the result on the webpage
+  function updateResult(result) {
+    document.getElementById("result").textContent = result;
+  }
+
+  // Function to start the game when a button is clicked
+  function playGame(userChoice) {
+    const computerChoice = getComputerChoice();
+    const result = determineWinner(userChoice, computerChoice);
+    updateResult(`You chose: ${userChoice}\nComputer chose: ${computerChoice}\n${result}`);
+  }
+
+  // Attach event listeners to buttons
+  document.getElementById("rock").addEventListener("click", () => playGame("rock"));
+  document.getElementById("paper").addEventListener("click", () => playGame("paper"));
+  document.getElementById("scissors").addEventListener("click", () => playGame("scissors"));
+</script>
 </body>
 </html>
