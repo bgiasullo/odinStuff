@@ -1,50 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rock Paper Scissors Game</title>
-<style>
-  body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-  }
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: darkslateblue;
-    color: ghostwhite;
-  }
-</style>
+  <title>Rock Paper Scissors</title>
 </head>
 <body>
-<h1>Rock Paper Scissors Game</h1>
-<button id="rock">Rock</button>
-<button id="paper">Paper</button>
-<button id="scissors">Scissors</button>
-<p id="result"></p>
-
-<script>
-  // JavaScript code for the game (same as the previous example)
-
-  // Function to update the result on the webpage
-  function updateResult(result) {
-    document.getElementById("result").textContent = result;
-  }
-
-  // Function to start the game when a button is clicked
-  function playGame(userChoice) {
-    const computerChoice = getComputerChoice();
-    const result = determineWinner(userChoice, computerChoice);
-    updateResult(`You chose: ${userChoice}\nComputer chose: ${computerChoice}\n${result}`);
-  }
-
-  // Attach event listeners to buttons
-  document.getElementById("rock").addEventListener("click", () => playGame("rock"));
-  document.getElementById("paper").addEventListener("click", () => playGame("paper"));
-  document.getElementById("scissors").addEventListener("click", () => playGame("scissors"));
-</script>
+  <div style="margin-bottom: 20px">
+    <input type="button" value="rock"></input>
+    <input type="button" value="paper"></input>
+    <input type="button" value="scissors"></input>
+  </div>
+  <div id="result"></div>
+  <script src="rpsjs.js"></script>
 </body>
 </html>
