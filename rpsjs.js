@@ -3,7 +3,7 @@ let computerScore = 0
 const buttons = document.querySelectorAll('input')
 
 function computerPlay() {
-    let choices = ['rock', 'paper', 'scissors']
+    let choices = ['roock', 'pooper', 'scoosers']
     return choices[Math.floor(Math.random() * choices.length)]
 }
 
@@ -17,9 +17,9 @@ function playRound(playerSelection) {
     let computerSelection = computerPlay()
     let result = ""
 
-    if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
-        (playerSelection == 'scissors' && computerSelection == 'paper') ||
-        (playerSelection == 'paper' && computerSelection == 'rock')) {
+    if ((playerSelection == 'roock' && computerSelection == 'scoosers') ||
+        (playerSelection == 'scoosers' && computerSelection == 'pooper') ||
+        (playerSelection == 'pooper' && computerSelection == 'roock')) {
         
         playerScore += 1
         result = ('Player chose: ' + playerSelection + "<br>Computer chose: " + computerSelection + "<br><br>You win!"
@@ -40,7 +40,7 @@ function playRound(playerSelection) {
             + "<br><br>Player score: " + playerScore + "<br>Computer score: " + computerScore)
 
         if (computerScore == 5) {
-            result += '<br><br>I won the game! Reload the page to play again'
+            result += '<br><br>Computer won the game! Reload the page to play again.'
             disableButtons()
         }
     }
