@@ -15,12 +15,11 @@ body {
 }
 
 header {
-    width: 500px;
+    width: 700px;
     background-color: #649cbc;
-    height: 100px;
-    padding: 30px;
+    padding: 26px;
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     margin: auto;
     color: white;
@@ -29,12 +28,13 @@ header {
 }
 
 .content {
-  width: 500px;
+  width: 700px;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   background-color: #decba1;
   border: 1px solid #30302e;
   border-radius: 10px;
+  text-align: center;
 }
 
 .buttons {
@@ -44,6 +44,7 @@ header {
   align-content: center;
   justify-content: space-evenly;
   text-align: center;
+  padding: 20px;
 }
 
 .butt {
@@ -74,6 +75,6 @@ header {
 #result {
   padding: 20px;
   font-family: 'Trebuchet MS', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   margin: auto;
 }
