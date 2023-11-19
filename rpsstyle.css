@@ -16,26 +16,33 @@ header {
     text-align: center;
     margin: auto;
     color: white;
-    border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #30302e;
+    border: 1px solid #30302e;
+    border-radius: 10px;
 }
 
 .content {
   width: 500px;
   margin: auto;
   padding: 22px;
+  background-color: #decba1;
+  border: 1px solid #30302e;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.buttons {
+  width: 500px;
+  margin: auto;
   display: flex;
+  gap: 19px;
   align-content: center;
-  justify-content: space-evenly;
-  gap: 8px;
   text-align: center;
 }
 
 .butt {
-  display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
+  width: 160px;
   cursor: grabbing;
   text-align: center;
   text-decoration: none;
@@ -43,7 +50,7 @@ header {
   color: white;
   background-color: #776f67;
   border: none;
-  border-radius: 15px;
+  border-radius: 9px;
   box-shadow: 0 9px #30302e;
 }
   
