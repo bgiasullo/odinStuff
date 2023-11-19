@@ -6,6 +6,10 @@ body {
     background-attachment: fixed;
 }
 
+::selection {
+  background: #4f73ad;
+}
+
 header {
     width: 500px;
     background-color: #649cbc;
@@ -62,4 +66,12 @@ header {
   background-color: #649cbc;
   box-shadow: 0 5px #30302e;
   transform: translateY(4px);
+}
+
+#result {
+  padding: 22px;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  margin: auto;
 }
